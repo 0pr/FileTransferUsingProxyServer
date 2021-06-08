@@ -13,3 +13,34 @@ QUIC is a protocol which combines the functions of HTTP/2, TLS, and TCP directly
 communication. MPQUIC, a major extension for QUIC that enables a
 QUIC connection across multiple subflows, keeping into consideration compatibility goals in order to achieve a seamless deployment of the new protocol on
 systems and infrastructures.
+
+#Steps:
+
+1.Client sends request to proxy server.
+2.The proxy server checks its directory for the requested file.
+3.If it is present in the directory then it is transmitted to the client
+4.If file is not present in proxy server's directory, the proxy server asks the main server for the file.
+5.Main server transfers the file to the proxy server.
+6.Proxy server maintains a copy of the file and transfers it to the client.
+
+#Commands:
+
+#compile server
+gcc server.c -o server.o -lpthread
+
+#run server - hardcoded to run on port 5010
+./server.o
+
+#compile proxy server
+gcc proxy.c -o proxy.o -lpthread
+
+#run proxy server - hardcoded to run on port 5000
+./proxy 127.0.0.1 5010 5000
+
+#compile client
+gcc client.c -o client.o -lpthread
+
+#run client
+./client.o
+
+

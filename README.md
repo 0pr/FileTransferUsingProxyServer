@@ -14,7 +14,7 @@ communication. MPQUIC, a major extension for QUIC that enables a
 QUIC connection across multiple subflows, keeping into consideration compatibility goals in order to achieve a seamless deployment of the new protocol on
 systems and infrastructures.
 
-#Steps:
+Steps:
 
 1.Client sends request to proxy server.
 2.The proxy server checks its directory for the requested file.
@@ -23,24 +23,18 @@ systems and infrastructures.
 5.Main server transfers the file to the proxy server.
 6.Proxy server maintains a copy of the file and transfers it to the client.
 
-#Commands:
+Commands:
 
-#compile server
-gcc server.c -o server.o -lpthread
+Compile main server : $gcc server.c -o server.o -lpthread
 
-#run server - hardcoded to run on port 5010
-./server.o
+Run main server  (runs on port 5010) : $./server.o
 
-#compile proxy server
-gcc proxy.c -o proxy.o -lpthread
+Compile proxy server : $gcc proxy.c -o proxy.o -lpthread
 
-#run proxy server - hardcoded to run on port 5000
-./proxy 127.0.0.1 5010 5000
+Run proxy server (runs on port 5000) : $./proxy 127.0.0.1 5010 5000
 
-#compile client
-gcc client.c -o client.o -lpthread
+Compile client : $gcc client.c -o client.o -lpthread
 
-#run client
-./client.o
+Run client : $./client.o
 
 

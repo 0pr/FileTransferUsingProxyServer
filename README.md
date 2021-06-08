@@ -8,3 +8,8 @@ and minitopo extensions.
 We have made a few changes in the code of client.
 In particular we  have initialised the variable to store the response from the server.Then a new file is created which has same name as that of server and contents of the variable in it are placed in it.The file name variable is initialised as the last path of the url given by the client.Then using wireshark we test the
 transfer of file in single path as well as multipath.
+
+QUIC is a protocol which combines the functions of HTTP/2, TLS, and TCP directly over UDP to reduce the latency of client-server
+communication. MPQUIC, a major extension for QUIC that enables a
+QUIC connection across multiple subflows, keeping into consideration compatibility goals in order to achieve a seamless deployment of the new protocol on
+systems and infrastructures.

@@ -17,11 +17,17 @@ systems and infrastructures.
 Steps:
 
 1.Client sends request to proxy server.
+
 2.The proxy server checks its directory for the requested file.
+
 3.If it is present in the directory then it is transmitted to the client
+
 4.If file is not present in proxy server's directory, the proxy server asks the main server for the file.
+
 5.Main server transfers the file to the proxy server.
+
 6.Proxy server maintains a copy of the file and transfers it to the client.
+
 
 Commands:
 

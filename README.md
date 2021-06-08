@@ -31,16 +31,16 @@ Steps:
 
 Commands:
 
-Compile main server : $gcc server.c -o server.o -lpthread
+1. Compile main server : $gcc server.c -o server.o -lpthread
 
-Run main server  (runs on port 5010) : $./server.o
+2. Run main server  (runs on port 5010) : $./server.o
 
-Compile proxy server : $gcc proxy.c -o proxy.o -lpthread
+3. Compile proxy server : $gcc proxy.c -o proxy.o -lpthread
 
-Run proxy server (runs on port 5000) : $./proxy 127.0.0.1 5010 5000
+4. Run proxy server (runs on port 5000) : $./proxy 127.0.0.1 5010 5000
 
-Compile client : $gcc client.c -o client.o -lpthread
+5. Compile client : $gcc client.c -o client.o -lpthread
 
-Run client : $./client.o
+6. Run client : $./client.o
 
 
